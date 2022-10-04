@@ -56,9 +56,6 @@ jobs:
         with:
           python-version: 3.8.12
           cache: 'pip'
-      - name: Clear outputs for validation
-        run: |
-          jupyter nbconvert --clear-output --inplace ${{ matrix.notebooks }}
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory
@@ -70,6 +67,9 @@ jobs:
           pip install pytest
           pip install nbval
           pip install nbconvert
+      - name: Clear outputs for validation
+        run: |
+          jupyter nbconvert --clear-output --inplace ${{ matrix.notebooks }}
       - name: Validate notebooks 
         run: |
          pytest --nbval "${{ matrix.notebooks }}"

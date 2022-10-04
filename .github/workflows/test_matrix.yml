@@ -98,10 +98,11 @@ jobs:
           pip install nbconvert
       - name: Execute notebooks
         run: |
-          jupyter nbconvert --to ipynb --execute "${{ matrix.notebooks }}"
+          jupyter nbconvert --inplace --to ipynb --execute "${{ matrix.notebooks }}"
       - name: Commit back to repo
         uses: EndBug/add-and-commit@v9
         with:
+          add: "${{ matrix.notebooks }}"
           default_author: github_actions
           
   deploy-book:

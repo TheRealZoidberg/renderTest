@@ -58,7 +58,7 @@ jobs:
           cache: 'pip'
       - name: Clear outputs for validation
         run: |
-          jupyter nbconvert --clear-output --inplace ${{ matrix.notebooks }}"
+          jupyter nbconvert --clear-output --inplace ${{ matrix.notebooks }}
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory

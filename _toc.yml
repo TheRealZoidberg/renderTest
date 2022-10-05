@@ -7,19 +7,19 @@ defaults:  # The defaults key will be applied to all chapters and sub-sections
 parts:
   - caption: General
     chapters:
-    - notebooks//NIRISS_WFSS_postpipeline/03_Spatially_resolved_emission_line_map.ipynb
-    - notebooks//NIRISS_WFSS_postpipeline/00_Optimal_extraction.ipynb
-    - notebooks//NIRISS_WFSS_postpipeline/01_Combine_and_normalize_1D_spectra.ipynb
-    - notebooks//NIRISS_WFSS_postpipeline/02_Cross_correlation_template.ipynb
-    - notebooks//mos-spectroscopy/MOSspec_sv06_revised.ipynb
-    - notebooks//example_notebook/example_notebook.ipynb
-    - notebooks//IFU_cube_continuum_fit/NGC4151_FeII_ContinuumFit.ipynb
-    - notebooks//NIRCam_PSF-matched_photometry/NIRCam_PSF_matched_multiband_photometry.ipynb
-    - notebooks//MIRI_IFU_YSOs_in_the_LMC/isha_nayak_ysos_in_the_lmc.ipynb
-    - notebooks//ifu_optimal/ifu_optimal.ipynb
-    - notebooks//redshift_crosscorr/redshift_with_crosscorr.ipynb
-    - notebooks//background_estimation_imaging/Imaging_Sky_Background_Estimation.ipynb
-    - notebooks//composite_model_fitting/specfit_demo_3.ipynb
-    - notebooks//aperture_photometry/NIRCam_Aperture_Photometry_Example.ipynb
-    - notebooks//NIRSpec_MAST_Query/NIRSpec_MAST_Query.ipynb
-    - notebooks//NIRCam_photometry/NIRCam_multiband_photometry.ipynb
+    - file: notebooks//NIRISS_WFSS_postpipeline/03_Spatially_resolved_emission_line_map.ipynb
+    - file: notebooks//NIRISS_WFSS_postpipeline/00_Optimal_extraction.ipynb
+    - file: notebooks//NIRISS_WFSS_postpipeline/01_Combine_and_normalize_1D_spectra.ipynb
+    - file: notebooks//NIRISS_WFSS_postpipeline/02_Cross_correlation_template.ipynb
+    - file: notebooks//mos-spectroscopy/MOSspec_sv06_revised.ipynb
+    - file: notebooks//example_notebook/example_notebook.ipynb
+    - file: notebooks//IFU_cube_continuum_fit/NGC4151_FeII_ContinuumFit.ipynb
+    - file: notebooks//NIRCam_PSF-matched_photometry/NIRCam_PSF_matched_multiband_photometry.ipynb
+    - file: notebooks//MIRI_IFU_YSOs_in_the_LMC/isha_nayak_ysos_in_the_lmc.ipynb
+    - file: notebooks//ifu_optimal/ifu_optimal.ipynb
+    - file: notebooks//redshift_crosscorr/redshift_with_crosscorr.ipynb
+    - file: notebooks//background_estimation_imaging/Imaging_Sky_Background_Estimation.ipynb
+    - file: notebooks//composite_model_fitting/specfit_demo_3.ipynb
+    - file: notebooks//aperture_photometry/NIRCam_Aperture_Photometry_Example.ipynb
+    - file: notebooks//NIRSpec_MAST_Query/NIRSpec_MAST_Query.ipynb
+    - file: notebooks//NIRCam_photometry/NIRCam_multiband_photometry.ipynb

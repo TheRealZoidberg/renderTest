@@ -5,10 +5,10 @@
 
 #######################################################################################
 # Book settings
-title                       : Notebook Build Tests  # The title of the book. Will be placed in the left navbar.
-author                      : me1  # The author of the book
+title                       : My Book  # The title of the book. Will be placed in the left navbar.
+author                      : Captain Jupyter  # The author of the book
 copyright                   : "2022"  # Copyright year to be placed in the footer
-logo                        : stsci_logo2.png  # A path to the book logo
+logo                        : logo.png  # A path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -23,30 +23,15 @@ latex:
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
-  
-launch_buttons:
-  thebe                  : true
+
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/therealzoidberg/actions-ci-testing/  # Online location of your book
-  path_to_book: notebooks  # Optional path to your book, relative to the repository root
+  url: https://github.com/captainjupyter/My Book  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  google_analytics_id: G-D46G4HKJY3
-  extra_footer: |
-    <div class="header">
-        <div class="header content">
-            <img class="logo" src="Jspectra.svg" alt="JWST Data Analysis Notebooks"/>
-            <div class="search">
-                <div class="searchbox"></div>
-                <div class="searchbutton">
-                    Filter Notebooks
-                </div>
-            </div>
-        </div>
-    </div>
   use_issues_button: true
   use_repository_button: true

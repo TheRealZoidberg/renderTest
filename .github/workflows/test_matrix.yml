@@ -1,4 +1,4 @@
-## Workflow to run when there is a direct push to the main branch, or a PR is submitted.  
+# Workflow to run when there is a direct push to the main branch, or a PR is submitted.  
 ## The workflow runs three workflows - Valdation, Execution, and HTML Deployment.
 ## The jobs are dependent on the previous succeding - if valdiation fails, the rest will, if 
 ## execution fails, html deployment will not run.
@@ -51,10 +51,10 @@ jobs:
             notebooks: ${{ fromJson(needs.gather-notebooks.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v2   
-      - name: Set up Python 3.8.12
+      - name: Set up Python 3.8.10
         uses: actions/setup-python@v2 ## needed for caching
         with:
-          python-version: 3.8.12
+          python-version: 3.8.10
           cache: 'pip'
       - name: Add conda to system path
         run: |
@@ -83,10 +83,10 @@ jobs:
             notebooks: ${{ fromJson(needs.gather-notebooks.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v2   
-      - name: Set up Python 3.8.12
+      - name: Set up Python 3.8.10
         uses: actions/setup-python@v2 ## needed for caching
         with:
-          python-version: 3.8.12
+          python-version: 3.8.10
           cache: 'pip'
       - name: Add conda to system path
         run: |
@@ -118,10 +118,10 @@ jobs:
           sudo rm -rf /opt/ghc
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8.12
+    - name: Set up Python 3.8.10
       uses: actions/setup-python@v2 ## needed for caching
       with:
-        python-version: 3.8.12
+        python-version: 3.8.10
         cache: 'pip'
     - name: Add conda to system path
       run: |

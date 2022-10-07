@@ -151,38 +151,8 @@ const thebe_selector_output = ".output, .cell_output"
            </a>
           </li>
           <li class="toctree-l1">
-           <a class="reference internal" href="../IFU_cube_continuum_fit/NGC4151_FeII_ContinuumFit.html">
-            IFU Cube Fitting
-           </a>
-          </li>
-          <li class="toctree-l1">
-           <a class="reference internal" href="../NIRCam_PSF-matched_photometry/NIRCam_PSF_matched_multiband_photometry.html">
-            Cross-Filter PSF Matching
-           </a>
-          </li>
-          <li class="toctree-l1">
-           <a class="reference internal" href="../MIRI_IFU_YSOs_in_the_LMC/isha_nayak_ysos_in_the_lmc.html">
-            IFU of YSOs in LMC
-           </a>
-          </li>
-          <li class="toctree-l1">
-           <a class="reference internal" href="../ifu_optimal/ifu_optimal.html">
-            IFU Optimal Spectral Extraction
-           </a>
-          </li>
-          <li class="toctree-l1">
            <a class="reference internal" href="../redshift_crosscorr/redshift_with_crosscorr.html">
             Measuring Galaxy Redshifts with Cross-correlation
-           </a>
-          </li>
-          <li class="toctree-l1">
-           <a class="reference internal" href="../background_estimation_imaging/Imaging_Sky_Background_Estimation.html">
-            Complex 2D Background
-           </a>
-          </li>
-          <li class="toctree-l1">
-           <a class="reference internal" href="../composite_model_fitting/specfit_demo_3.html">
-            Composite Model Spectral Fitting
            </a>
           </li>
           <li class="toctree-l1">
@@ -193,11 +163,6 @@ const thebe_selector_output = ".output, .cell_output"
           <li class="toctree-l1">
            <a class="reference internal" href="../NIRSpec_MAST_Query/NIRSpec_MAST_Query.html">
             MAST Query
-           </a>
-          </li>
-          <li class="toctree-l1">
-           <a class="reference internal" href="../NIRCam_photometry/NIRCam_multiband_photometry.html">
-            Extended Aperture Photometry
            </a>
           </li>
          </ul>
@@ -585,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
           </h1>
           <p>
            <strong>
-            Use case:
+            Use case    :
            </strong>
            optimal extraction of grism spectra; redshift measurement; emission-line maps.  Simplified version of
            <a class="reference external" href="https://jwst-docs.stsci.edu/near-infrared-imager-and-slitless-spectrograph/niriss-example-science-programs/niriss-wfss-with-nircam-parallel-imaging-of-galaxies-in-lensing-clusters">
@@ -697,6 +662,15 @@ const thebe_selector_output = ".output, .cell_output"
               </div>
              </div>
             </div>
+            <div class="cell_output docutils container">
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>specutils 1.8.1
+astropy 5.1
+</pre>
+              </div>
+             </div>
+            </div>
            </div>
            <section id="the-version-should-be">
             <h3>
@@ -798,6 +772,15 @@ const thebe_selector_output = ".output, .cell_output"
               </div>
              </div>
             </div>
+            <div class="cell_output docutils container">
+             <div class="output stderr highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>/tmp/ipykernel_1719/774001514.py:24: RuntimeWarning: divide by zero encountered in divide
+  weight = 1/np.square(err)
+</pre>
+              </div>
+             </div>
+            </div>
            </div>
            <div class="cell docutils container">
             <div class="cell_input docutils container">
@@ -818,6 +801,1634 @@ const thebe_selector_output = ".output, .cell_output"
               <div class="highlight">
                <pre><span></span><span class="n">fd</span>
 </pre>
+              </div>
+             </div>
+            </div>
+            <div class="cell_output docutils container">
+             <div class="output text_html">
+              <div>
+               <i>
+                QTable length=7
+               </i>
+               <table class="table-striped table-bordered table-condensed" id="table140294348748016">
+                <thead>
+                 <tr>
+                  <th>
+                   id
+                  </th>
+                  <th>
+                   xcentroid
+                  </th>
+                  <th>
+                   ycentroid
+                  </th>
+                  <th>
+                   sky_centroid
+                  </th>
+                  <th>
+                   aper_bkg_flux
+                  </th>
+                  <th>
+                   aper_bkg_flux_err
+                  </th>
+                  <th>
+                   aper30_flux
+                  </th>
+                  <th>
+                   aper30_flux_err
+                  </th>
+                  <th>
+                   aper50_flux
+                  </th>
+                  <th>
+                   aper50_flux_err
+                  </th>
+                  <th>
+                   aper70_flux
+                  </th>
+                  <th>
+                   aper70_flux_err
+                  </th>
+                  <th>
+                   aper_total_flux
+                  </th>
+                  <th>
+                   aper_total_flux_err
+                  </th>
+                  <th>
+                   aper30_abmag
+                  </th>
+                  <th>
+                   aper30_abmag_err
+                  </th>
+                  <th>
+                   aper50_abmag
+                  </th>
+                  <th>
+                   aper50_abmag_err
+                  </th>
+                  <th>
+                   aper70_abmag
+                  </th>
+                  <th>
+                   aper70_abmag_err
+                  </th>
+                  <th>
+                   aper_total_abmag
+                  </th>
+                  <th>
+                   aper_total_abmag_err
+                  </th>
+                  <th>
+                   aper30_vegamag
+                  </th>
+                  <th>
+                   aper30_vegamag_err
+                  </th>
+                  <th>
+                   aper50_vegamag
+                  </th>
+                  <th>
+                   aper50_vegamag_err
+                  </th>
+                  <th>
+                   aper70_vegamag
+                  </th>
+                  <th>
+                   aper70_vegamag_err
+                  </th>
+                  <th>
+                   aper_total_vegamag
+                  </th>
+                  <th>
+                   aper_total_vegamag_err
+                  </th>
+                  <th>
+                   CI_30_50
+                  </th>
+                  <th>
+                   CI_50_70
+                  </th>
+                  <th>
+                   CI_30_70
+                  </th>
+                  <th>
+                   is_star
+                  </th>
+                  <th>
+                   sharpness
+                  </th>
+                  <th>
+                   roundness
+                  </th>
+                  <th>
+                   nn_dist
+                  </th>
+                  <th>
+                   nn_abmag
+                  </th>
+                  <th>
+                   isophotal_flux
+                  </th>
+                  <th>
+                   isophotal_flux_err
+                  </th>
+                  <th>
+                   isophotal_abmag
+                  </th>
+                  <th>
+                   isophotal_abmag_err
+                  </th>
+                  <th>
+                   isophotal_vegamag
+                  </th>
+                  <th>
+                   isophotal_vegamag_err
+                  </th>
+                  <th>
+                   isophotal_area
+                  </th>
+                  <th>
+                   semimajor_sigma
+                  </th>
+                  <th>
+                   semiminor_sigma
+                  </th>
+                  <th>
+                   ellipticity
+                  </th>
+                  <th>
+                   orientation
+                  </th>
+                  <th>
+                   sky_orientation
+                  </th>
+                  <th>
+                   sky_bbox_ll
+                  </th>
+                  <th>
+                   sky_bbox_ul
+                  </th>
+                  <th>
+                   sky_bbox_lr
+                  </th>
+                  <th>
+                   sky_bbox_ur
+                  </th>
+                 </tr>
+                </thead>
+                <thead>
+                 <tr>
+                  <th>
+                  </th>
+                  <th>
+                   pix
+                  </th>
+                  <th>
+                   pix
+                  </th>
+                  <th>
+                   deg,deg
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                   pix
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                   Jy
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                   pix2
+                  </th>
+                  <th>
+                   pix
+                  </th>
+                  <th>
+                   pix
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                   deg
+                  </th>
+                  <th>
+                   deg
+                  </th>
+                  <th>
+                   deg,deg
+                  </th>
+                  <th>
+                   deg,deg
+                  </th>
+                  <th>
+                   deg,deg
+                  </th>
+                  <th>
+                   deg,deg
+                  </th>
+                 </tr>
+                </thead>
+                <thead>
+                 <tr>
+                  <th>
+                   int64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   SkyCoord
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float32
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float32
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   float64
+                  </th>
+                  <th>
+                   SkyCoord
+                  </th>
+                  <th>
+                   SkyCoord
+                  </th>
+                  <th>
+                   SkyCoord
+                  </th>
+                  <th>
+                   SkyCoord
+                  </th>
+                 </tr>
+                </thead>
+                <tr>
+                 <td>
+                  1
+                 </td>
+                 <td>
+                  1901.4791
+                 </td>
+                 <td>
+                  616.6617
+                 </td>
+                 <td>
+                  3.569653944921018,-30.405070186723776
+                 </td>
+                 <td>
+                  3.483045e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  8.130363e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.921404e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  3.765590e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  26.624725
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  25.690953
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.960418
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.915445
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.981673
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.251138
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.9338
+                 </td>
+                 <td>
+                  0.7305
+                 </td>
+                 <td>
+                  1.6643
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.643053
+                 </td>
+                 <td>
+                  0.050833
+                 </td>
+                 <td>
+                  687.142856
+                 </td>
+                 <td>
+                  22.245099
+                 </td>
+                 <td>
+                  3.217875e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.631077
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.921797
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  83.0
+                 </td>
+                 <td>
+                  2.300009
+                 </td>
+                 <td>
+                  2.249340
+                 </td>
+                 <td>
+                  0.022030
+                 </td>
+                 <td>
+                  -68.272405
+                 </td>
+                 <td>
+                  22.344833
+                 </td>
+                 <td>
+                  3.569758007135362,-30.405165289935546
+                 </td>
+                 <td>
+                  3.5697605503538763,-30.404964734861768
+                 </td>
+                 <td>
+                  3.56952547091111,-30.405163096272904
+                 </td>
+                 <td>
+                  3.5695280146070885,-30.404962541203844
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  2
+                 </td>
+                 <td>
+                  1215.5473
+                 </td>
+                 <td>
+                  657.4411
+                 </td>
+                 <td>
+                  3.5841636319830568,-30.40446267443482
+                 </td>
+                 <td>
+                  4.591611e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.550019e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  3.638838e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  6.725310e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  25.924158
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.997593
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.330719
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.214878
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.288313
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.621439
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.9266
+                 </td>
+                 <td>
+                  0.6669
+                 </td>
+                 <td>
+                  1.5934
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.666481
+                 </td>
+                 <td>
+                  0.076069
+                 </td>
+                 <td>
+                  687.142856
+                 </td>
+                 <td>
+                  22.631077
+                 </td>
+                 <td>
+                  4.591563e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.245099
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.535819
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  95.0
+                 </td>
+                 <td>
+                  2.968964
+                 </td>
+                 <td>
+                  1.778262
+                 </td>
+                 <td>
+                  0.401050
+                 </td>
+                 <td>
+                  89.747234
+                 </td>
+                 <td>
+                  180.364471
+                 </td>
+                 <td>
+                  3.5842476045730627,-30.404590023798825
+                 </td>
+                 <td>
+                  3.5842510319996697,-30.404316539215852
+                 </td>
+                 <td>
+                  3.5840573485032308,-30.404588250016765
+                 </td>
+                 <td>
+                  3.58406077646256,-30.404314765438812
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  3
+                 </td>
+                 <td>
+                  381.9250
+                 </td>
+                 <td>
+                  984.5165
+                 </td>
+                 <td>
+                  3.601859711428753,-30.398662437780448
+                 </td>
+                 <td>
+                  4.268341e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.404209e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  3.172360e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  6.277053e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  26.031420
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  25.146544
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.405610
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.322140
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.437264
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.696330
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.8849
+                 </td>
+                 <td>
+                  0.7409
+                 </td>
+                 <td>
+                  1.6258
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.672185
+                 </td>
+                 <td>
+                  0.331872
+                 </td>
+                 <td>
+                  673.406986
+                 </td>
+                 <td>
+                  16.320658
+                 </td>
+                 <td>
+                  4.647145e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.232034
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.522754
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  101.0
+                 </td>
+                 <td>
+                  2.880019
+                 </td>
+                 <td>
+                  1.989674
+                 </td>
+                 <td>
+                  0.309146
+                 </td>
+                 <td>
+                  -89.237463
+                 </td>
+                 <td>
+                  1.379775
+                 </td>
+                 <td>
+                  3.6019516675347565,-30.39879122365138
+                 </td>
+                 <td>
+                  3.601955045183127,-30.39851773861101
+                 </td>
+                 <td>
+                  3.6017402841066257,-30.398789281273874
+                 </td>
+                 <td>
+                  3.60174366234683,-30.398515796238758
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  4
+                 </td>
+                 <td>
+                  1100.5677
+                 </td>
+                 <td>
+                  1408.4408
+                 </td>
+                 <td>
+                  3.5867654957418873,-30.390792851961756
+                 </td>
+                 <td>
+                  4.182255e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.977441e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  4.634087e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  8.557904e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  25.659741
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.735090
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.069081
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.950461
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.025810
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.359801
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.9247
+                 </td>
+                 <td>
+                  0.6660
+                 </td>
+                 <td>
+                  1.5907
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.675891
+                 </td>
+                 <td>
+                  0.239616
+                 </td>
+                 <td>
+                  759.750606
+                 </td>
+                 <td>
+                  22.245099
+                 </td>
+                 <td>
+                  4.479109e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.272021
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.562741
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  78.0
+                 </td>
+                 <td>
+                  2.864331
+                 </td>
+                 <td>
+                  1.524197
+                 </td>
+                 <td>
+                  0.467870
+                 </td>
+                 <td>
+                  89.968483
+                 </td>
+                 <td>
+                  180.585720
+                 </td>
+                 <td>
+                  3.586849890460872,-30.390920199626773
+                 </td>
+                 <td>
+                  3.586853310121526,-30.390646714975425
+                 </td>
+                 <td>
+                  3.586659660970119,-30.390918429617493
+                 </td>
+                 <td>
+                  3.586663081163341,-30.39064494497111
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  5
+                 </td>
+                 <td>
+                  662.4288
+                 </td>
+                 <td>
+                  1685.1702
+                 </td>
+                 <td>
+                  3.596088874688556,-30.385833272645225
+                 </td>
+                 <td>
+                  3.108490e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  6.850841e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.445057e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  2.486505e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.310640
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.500287
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.911026
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.601360
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  21.791007
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  21.201746
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.8104
+                 </td>
+                 <td>
+                  0.5893
+                 </td>
+                 <td>
+                  1.3996
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.584634
+                 </td>
+                 <td>
+                  -0.067064
+                 </td>
+                 <td>
+                  334.076772
+                 </td>
+                 <td>
+                  20.727265
+                 </td>
+                 <td>
+                  5.441945e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.060615
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.351335
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  71.0
+                 </td>
+                 <td>
+                  1.874113
+                 </td>
+                 <td>
+                  1.820229
+                 </td>
+                 <td>
+                  0.028752
+                 </td>
+                 <td>
+                  10.431093
+                 </td>
+                 <td>
+                  101.048330
+                 </td>
+                 <td>
+                  3.5961919899951726,-30.38591938323127
+                 </td>
+                 <td>
+                  3.5961942522168715,-30.385737059975185
+                 </td>
+                 <td>
+                  3.5959594989853887,-30.38591723639035
+                 </td>
+                 <td>
+                  3.5959617616410102,-30.38573491313818
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  6
+                 </td>
+                 <td>
+                  319.4990
+                 </td>
+                 <td>
+                  1885.3035
+                 </td>
+                 <td>
+                  3.60338188710553,-30.382251101963146
+                 </td>
+                 <td>
+                  3.326749e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  6.893335e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.514847e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  2.523116e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.303927
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.449078
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.895157
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.594647
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  21.739798
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  21.185877
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.8548
+                 </td>
+                 <td>
+                  0.5539
+                 </td>
+                 <td>
+                  1.4088
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.581781
+                 </td>
+                 <td>
+                  0.158721
+                 </td>
+                 <td>
+                  111.504109
+                 </td>
+                 <td>
+                  22.028328
+                 </td>
+                 <td>
+                  5.666923e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.016632
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.307352
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  75.0
+                 </td>
+                 <td>
+                  1.894424
+                 </td>
+                 <td>
+                  1.866322
+                 </td>
+                 <td>
+                  0.014834
+                 </td>
+                 <td>
+                  14.267744
+                 </td>
+                 <td>
+                  104.884981
+                 </td>
+                 <td>
+                  3.603486459620283,-30.38233965159385
+                 </td>
+                 <td>
+                  3.603488932995949,-30.382139095884135
+                 </td>
+                 <td>
+                  3.6032539769794103,-30.38233751766547
+                 </td>
+                 <td>
+                  3.6032564508323546,-30.382136961959965
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  7
+                 </td>
+                 <td>
+                  266.9182
+                 </td>
+                 <td>
+                  1983.6317
+                 </td>
+                 <td>
+                  3.604515260247416,-30.380468545121307
+                 </td>
+                 <td>
+                  3.310798e-08
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  7.155692e-07
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  1.476385e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  2.520043e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  24.263371
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  23.477001
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.896480
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.554091
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  21.767721
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  21.187200
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.7864
+                 </td>
+                 <td>
+                  0.5805
+                 </td>
+                 <td>
+                  1.3669
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  0.593763
+                 </td>
+                 <td>
+                  0.061278
+                 </td>
+                 <td>
+                  111.504109
+                 </td>
+                 <td>
+                  22.016632
+                 </td>
+                 <td>
+                  5.606203e-06
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  22.028328
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  20.319048
+                 </td>
+                 <td>
+                  nan
+                 </td>
+                 <td>
+                  74.0
+                 </td>
+                 <td>
+                  1.893807
+                 </td>
+                 <td>
+                  1.847921
+                 </td>
+                 <td>
+                  0.024230
+                 </td>
+                 <td>
+                  89.641888
+                 </td>
+                 <td>
+                  180.259126
+                 </td>
+                 <td>
+                  3.6046074836711655,-30.380562964468123
+                 </td>
+                 <td>
+                  3.6046099547002646,-30.380362408741654
+                 </td>
+                 <td>
+                  3.6043961396388418,-30.38056102635311
+                 </td>
+                 <td>
+                  3.6043986111017956,-30.38036047063047
+                 </td>
+                </tr>
+               </table>
               </div>
              </div>
             </div>
@@ -953,6 +2564,14 @@ const thebe_selector_output = ".output, .cell_output"
               </div>
              </div>
             </div>
+            <div class="cell_output docutils container">
+             <div class="output text_plain highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>0.0
+</pre>
+              </div>
+             </div>
+            </div>
            </div>
            <div class="cell docutils container">
             <div class="cell_input docutils container">
@@ -962,6 +2581,15 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
               </div>
              </div>
+            </div>
+            <div class="cell_output docutils container">
+             <div class="output text_plain highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f98d2bfb3d0&gt;
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_15_1.png" src="../../_images/00_Optimal_extraction_15_1.png"/>
             </div>
            </div>
            <div class="cell docutils container">
@@ -1015,6 +2643,15 @@ const thebe_selector_output = ".output, .cell_output"
                </div>
               </div>
              </div>
+             <div class="cell_output docutils container">
+              <div class="output text_plain highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>Text(0, 0.5, 'Cross-dispersion direction &gt;&gt;&gt;')
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_18_1.png" src="../../_images/00_Optimal_extraction_18_1.png"/>
+             </div>
             </div>
            </section>
           </section>
@@ -1038,6 +2675,15 @@ const thebe_selector_output = ".output, .cell_output"
               </div>
              </div>
             </div>
+            <div class="cell_output docutils container">
+             <div class="output text_plain highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>&lt;matplotlib.legend.Legend at 0x7f98d2aa4be0&gt;
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_20_1.png" src="../../_images/00_Optimal_extraction_20_1.png"/>
+            </div>
            </div>
            <div class="cell docutils container">
             <div class="cell_input docutils container">
@@ -1060,6 +2706,15 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
               </div>
              </div>
+            </div>
+            <div class="cell_output docutils container">
+             <div class="output text_plain highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>Text(0, 0.5, 'Source Flux')
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_21_1.png" src="../../_images/00_Optimal_extraction_21_1.png"/>
             </div>
            </div>
           </section>
@@ -1099,6 +2754,15 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
                </div>
               </div>
+             </div>
+             <div class="cell_output docutils container">
+              <div class="output text_plain highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>(1.7, 2.3)
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_24_1.png" src="../../_images/00_Optimal_extraction_24_1.png"/>
              </div>
             </div>
            </section>
@@ -1141,6 +2805,15 @@ const thebe_selector_output = ".output, .cell_output"
                </div>
               </div>
              </div>
+             <div class="cell_output docutils container">
+              <div class="output text_plain highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>(1.7, 2.3)
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_26_1.png" src="../../_images/00_Optimal_extraction_26_1.png"/>
+             </div>
             </div>
             <div class="cell docutils container">
              <div class="cell_input docutils container">
@@ -1155,6 +2828,15 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
                </div>
               </div>
+             </div>
+             <div class="cell_output docutils container">
+              <div class="output text_plain highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>Text(0.5, 0, 'Wavelength')
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_27_1.png" src="../../_images/00_Optimal_extraction_27_1.png"/>
              </div>
             </div>
            </section>
@@ -1209,6 +2891,15 @@ const thebe_selector_output = ".output, .cell_output"
               </div>
              </div>
             </div>
+            <div class="cell_output docutils container">
+             <div class="output text_plain highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>Text(0.5, 1.0, 'Source light profile along dispersed direction')
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_31_1.png" src="../../_images/00_Optimal_extraction_31_1.png"/>
+            </div>
            </div>
            <section id="unless-you-are-interested-in-spatially-resolved-spectra-you-can-stack-and-get-light-profile-as-a-good-approximation">
             <h3>
@@ -1234,6 +2925,15 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
                </div>
               </div>
+             </div>
+             <div class="cell_output docutils container">
+              <div class="output text_plain highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>&lt;matplotlib.legend.Legend at 0x7f98d26d0130&gt;
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_33_1.png" src="../../_images/00_Optimal_extraction_33_1.png"/>
              </div>
             </div>
            </section>
@@ -1308,6 +3008,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
                </div>
               </div>
+             </div>
+             <div class="cell_output docutils container">
+              <img alt="../../_images/00_Optimal_extraction_36_0.png" src="../../_images/00_Optimal_extraction_36_0.png"/>
              </div>
             </div>
             <div class="cell docutils container">
@@ -1486,6 +3189,65 @@ const thebe_selector_output = ".output, .cell_output"
                </div>
               </div>
              </div>
+             <div class="cell_output docutils container">
+              <div class="output stream highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>f115w
+0
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_39_1.png" src="../../_images/00_Optimal_extraction_39_1.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_2.png" src="../../_images/00_Optimal_extraction_39_2.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_3.png" src="../../_images/00_Optimal_extraction_39_3.png"/>
+              <div class="output stream highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>1
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_39_5.png" src="../../_images/00_Optimal_extraction_39_5.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_6.png" src="../../_images/00_Optimal_extraction_39_6.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_7.png" src="../../_images/00_Optimal_extraction_39_7.png"/>
+              <div class="output stream highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>f150w
+0
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_39_9.png" src="../../_images/00_Optimal_extraction_39_9.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_10.png" src="../../_images/00_Optimal_extraction_39_10.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_11.png" src="../../_images/00_Optimal_extraction_39_11.png"/>
+              <div class="output stream highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>1
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_39_13.png" src="../../_images/00_Optimal_extraction_39_13.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_14.png" src="../../_images/00_Optimal_extraction_39_14.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_15.png" src="../../_images/00_Optimal_extraction_39_15.png"/>
+              <div class="output stream highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>f200w
+0
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_39_17.png" src="../../_images/00_Optimal_extraction_39_17.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_18.png" src="../../_images/00_Optimal_extraction_39_18.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_19.png" src="../../_images/00_Optimal_extraction_39_19.png"/>
+              <div class="output stream highlight-myst-ansi notranslate">
+               <div class="highlight">
+                <pre><span></span>1
+</pre>
+               </div>
+              </div>
+              <img alt="../../_images/00_Optimal_extraction_39_21.png" src="../../_images/00_Optimal_extraction_39_21.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_22.png" src="../../_images/00_Optimal_extraction_39_22.png"/>
+              <img alt="../../_images/00_Optimal_extraction_39_23.png" src="../../_images/00_Optimal_extraction_39_23.png"/>
+             </div>
             </div>
            </section>
           </section>
@@ -1635,6 +3397,65 @@ const thebe_selector_output = ".output, .cell_output"
 </pre>
               </div>
              </div>
+            </div>
+            <div class="cell_output docutils container">
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>f115w
+0
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_41_1.png" src="../../_images/00_Optimal_extraction_41_1.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_2.png" src="../../_images/00_Optimal_extraction_41_2.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_3.png" src="../../_images/00_Optimal_extraction_41_3.png"/>
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>1
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_41_5.png" src="../../_images/00_Optimal_extraction_41_5.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_6.png" src="../../_images/00_Optimal_extraction_41_6.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_7.png" src="../../_images/00_Optimal_extraction_41_7.png"/>
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>f150w
+0
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_41_9.png" src="../../_images/00_Optimal_extraction_41_9.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_10.png" src="../../_images/00_Optimal_extraction_41_10.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_11.png" src="../../_images/00_Optimal_extraction_41_11.png"/>
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>1
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_41_13.png" src="../../_images/00_Optimal_extraction_41_13.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_14.png" src="../../_images/00_Optimal_extraction_41_14.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_15.png" src="../../_images/00_Optimal_extraction_41_15.png"/>
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>f200w
+0
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_41_17.png" src="../../_images/00_Optimal_extraction_41_17.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_18.png" src="../../_images/00_Optimal_extraction_41_18.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_19.png" src="../../_images/00_Optimal_extraction_41_19.png"/>
+             <div class="output stream highlight-myst-ansi notranslate">
+              <div class="highlight">
+               <pre><span></span>1
+</pre>
+              </div>
+             </div>
+             <img alt="../../_images/00_Optimal_extraction_41_21.png" src="../../_images/00_Optimal_extraction_41_21.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_22.png" src="../../_images/00_Optimal_extraction_41_22.png"/>
+             <img alt="../../_images/00_Optimal_extraction_41_23.png" src="../../_images/00_Optimal_extraction_41_23.png"/>
             </div>
            </div>
           </section>

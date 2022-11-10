@@ -108,6 +108,8 @@ jobs:
         with:
           add: "${{ matrix.notebooks }}"
           default_author: github_actions
+          new_branch: gh-storage
+          
           
   deploy-book:
     needs: [notebook-execution, notebook-validation]

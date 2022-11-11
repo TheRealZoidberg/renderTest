@@ -113,7 +113,7 @@ jobs:
           git checkout $BRANCH_NAME
           
           # commit
-          git add git add notebooks/\*.ipynb
+          git add notebooks/\*.ipynb
 
           git commit -m "auto generated $BRANCH_NAME"
 

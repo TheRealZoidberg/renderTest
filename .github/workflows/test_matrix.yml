@@ -125,8 +125,8 @@ jobs:
           # 'infinitely' pull,rebase,push until push is successful
           PUSH_SUCCESS=0
           while [ $PUSH_SUCCESS -eq 0 ]; do
-              git checkout master
-              git pull origin master
+              #git checkout master
+              git pull
               git checkout $BRANCH_NAME
               git rebase master
               git checkout master

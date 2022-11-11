@@ -108,8 +108,9 @@ jobs:
       # create branch name with unix timestamp
         run: |
           BRANCH_NAME="gh-storage"
-          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.name "theRealZoidberg"
           git config --global user.email "gough@stsci.edu"
+
           git branch $BRANCH_NAME
           git checkout $BRANCH_NAME
           

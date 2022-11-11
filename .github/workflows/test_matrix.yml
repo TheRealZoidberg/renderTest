@@ -103,13 +103,44 @@ jobs:
         run: |
           jupyter nbconvert --inplace --to ipynb --execute "${{ matrix.notebooks }}"
           #git pull ## pull in the latest before committing back to avoid race condition
+          
       - name: Commit back to repo
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "${{ matrix.notebooks }}"
-          default_author: github_actions
-          new_branch: gh-storage
-          pull: '--rebase --autostash'
+      # create branch name with unix timestamp
+        run: |
+          BRANCH_NAME="gh-storage"
+
+          git branch $BRANCH_NAME
+          git checkout $BRANCH_NAME
+          
+          # commit
+          git add git add notebooks/\*.ipynb
+
+          git commit -m "auto generated $BRANCH_NAME"
+
+          # push to branch as backup
+          git push -u origin $BRANCH_NAME
+
+          # 'infinitely' pull,rebase,push until push is successful
+          PUSH_SUCCESS=0
+          while [ $PUSH_SUCCESS -eq 0 ]; do
+              git checkout master
+              git pull origin master
+              git checkout $BRANCH_NAME
+              git rebase master
+              git checkout master
+              git merge --ff-only $BRANCH_NAME
+              git push origin master
+              if [ $? -eq 0 ]; then
+                  PUSH_SUCCESS=1
+              fi
+          done
+
+      #  uses: EndBug/add-and-commit@v9
+      #  with:
+      #    add: "${{ matrix.notebooks }}"
+      #    default_author: github_actions
+      #    new_branch: gh-storage
+      #    pull: '--rebase --autostash'
           
           
   deploy-book:

@@ -126,10 +126,10 @@ jobs:
               #git checkout master
               #git pull origin $BRANCH_NAME
               git checkout $BRANCH_NAME
-              git rebase $BRANCH_NAME
+              #git rebase $BRANCH_NAME
               git checkout $BRANCH_NAME
-              git merge --ff-only $BRANCH_NAME
-              git push -u origin $BRANCH_NAME
+              #git merge --ff-only $BRANCH_NAME
+              git push -f origin $BRANCH_NAME
               if [ $? -eq 0 ]; then
                   PUSH_SUCCESS=1
               fi

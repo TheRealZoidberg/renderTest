@@ -124,7 +124,7 @@ jobs:
           PUSH_SUCCESS=0
           while [ $PUSH_SUCCESS -eq 0 ]; do
               #git checkout master
-              git pull origin $BRANCH_NAME
+              #git pull origin $BRANCH_NAME
               git checkout $BRANCH_NAME
               git rebase $BRANCH_NAME
               git checkout $BRANCH_NAME

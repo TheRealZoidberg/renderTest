@@ -115,12 +115,12 @@ jobs:
           git checkout $BRANCH_NAME
           
           # commit
-          git add notebooks/\*.ipynb
+          git add "${{ matrix.notebooks }}"
 
-          git commit -m "auto generated $BRANCH_NAME"
+          git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}""
 
-          # push to branch as backup
-          git push -u origin $BRANCH_NAME
+          # force push to branch as backup
+          git push -f origin $BRANCH_NAME
 
           # 'infinitely' pull,rebase,push until push is successful
           PUSH_SUCCESS=0

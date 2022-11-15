@@ -158,9 +158,6 @@ jobs:
     - name: Checkout gh-storage branch
       run:
           BRANCH_NAME="gh-storage"
-          git config --global user.name "theRealZoidberg"
-          git config --global user.email "gough@stsci.edu"
-          git branch $BRANCH_NAME
           git checkout $BRANCH_NAME
     - name: Set up Python 3.8.10
       uses: actions/setup-python@v2 ## needed for caching

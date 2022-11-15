@@ -115,7 +115,7 @@ jobs:
           
           # commit
           git add "${{ matrix.notebooks }}"
-          git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}""
+          git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}"" "${{ matrix.notebooks }}"
 
           # force push to branch as backup
           git push -f origin $BRANCH_NAME

@@ -306,11 +306,6 @@ const thebe_selector_output = ".output, .cell_output"
        <nav aria-label="Page" id="bd-toc-nav">
         <ul class="visible nav section-nav flex-column">
          <li class="toc-h2 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#introduction">
-           Introduction
-          </a>
-         </li>
-         <li class="toc-h2 nav-item toc-entry">
           <a class="reference internal nav-link" href="#download-notebook-01-products">
            0. Download notebook 01 products
           </a>
@@ -385,11 +380,6 @@ const thebe_selector_output = ".output, .cell_output"
           </div>
           <nav aria-label="Page">
            <ul class="visible nav section-nav flex-column">
-            <li class="toc-h2 nav-item toc-entry">
-             <a class="reference internal nav-link" href="#introduction">
-              Introduction
-             </a>
-            </li>
             <li class="toc-h2 nav-item toc-entry">
              <a class="reference internal nav-link" href="#download-notebook-01-products">
               0. Download notebook 01 products
@@ -498,44 +488,40 @@ const thebe_selector_output = ".output, .cell_output"
            .
            <br/>
           </p>
-          <section id="introduction">
-           <h2>
-            Introduction
-            <a class="headerlink" href="#introduction" title="Permalink to this headline">
-             #
-            </a>
-           </h2>
-           <p>
-            This notebook is 3 of 4 in a set focusing on NIRISS WFSS data:
+          <p>
+           ##Introduction
+          </p>
+          <p>
+           This notebook is 3 of 4 in a set focusing on NIRISS WFSS data:
 1. 1D optimal extraction since the JWST pipeline only provides a box extraction.  Optimal extraction improves S/N of spectra for faint sources.
 2. Combine and normalize 1D spectra.
 3. Cross correlate galaxy with template to get redshift.
 4. Spatially resolved emission line map.
-           </p>
-           <p>
-            This notebook derives the redshift of a galaxy with multiple emission lines by using specutils template correlation.  The notebook begins with optimally extracted 1D spectra from notebook #2.
-           </p>
-           <p>
-            <strong>
-             Note:
-            </strong>
-            Spectra without emission lines (e.g., ID 00003 in the previous notebook) may fail with the function here.  For those spectra, Notebook #4 derives the redshift from absorption lines and direct images instead.
-           </p>
-           <div class="cell docutils container">
-            <div class="cell_input docutils container">
-             <div class="highlight-ipython3 notranslate">
-              <div class="highlight">
-               <pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+          </p>
+          <p>
+           This notebook derives the redshift of a galaxy with multiple emission lines by using specutils template correlation.  The notebook begins with optimally extracted 1D spectra from notebook #2.
+          </p>
+          <p>
+           <strong>
+            Note:
+           </strong>
+           Spectra without emission lines (e.g., ID 00003 in the previous notebook) may fail with the function here.  For those spectra, Notebook #4 derives the redshift from absorption lines and direct images instead.
+          </p>
+          <div class="cell docutils container">
+           <div class="cell_input docutils container">
+            <div class="highlight-ipython3 notranslate">
+             <div class="highlight">
+              <pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre>
-              </div>
              </div>
             </div>
            </div>
-           <div class="cell docutils container">
-            <div class="cell_input docutils container">
-             <div class="highlight-ipython3 notranslate">
-              <div class="highlight">
-               <pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+          </div>
+          <div class="cell docutils container">
+           <div class="cell_input docutils container">
+            <div class="highlight-ipython3 notranslate">
+             <div class="highlight">
+              <pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">h5py</span>
 
@@ -556,37 +542,37 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">import</span> <span class="nn">astropy</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'astropy'</span><span class="p">,</span> <span class="n">astropy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre>
-              </div>
-             </div>
-            </div>
-            <div class="cell_output docutils container">
-             <div class="output stream highlight-myst-ansi notranslate">
-              <div class="highlight">
-               <pre><span></span>astropy 5.1
-</pre>
-              </div>
              </div>
             </div>
            </div>
-           <div class="cell docutils container">
-            <div class="cell_input docutils container">
-             <div class="highlight-ipython3 notranslate">
-              <div class="highlight">
-               <pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+           <div class="cell_output docutils container">
+            <div class="output stream highlight-myst-ansi notranslate">
+             <div class="highlight">
+              <pre><span></span>astropy 5.1
+</pre>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="cell docutils container">
+           <div class="cell_input docutils container">
+            <div class="highlight-ipython3 notranslate">
+             <div class="highlight">
+              <pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
 
 <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'savefig.dpi'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span>
 <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'figure.dpi'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span>
 </pre>
-              </div>
              </div>
             </div>
            </div>
-           <div class="cell docutils container">
-            <div class="cell_input docutils container">
-             <div class="highlight-ipython3 notranslate">
-              <div class="highlight">
-               <pre><span></span><span class="kn">import</span> <span class="nn">specutils</span>
+          </div>
+          <div class="cell docutils container">
+           <div class="cell_input docutils container">
+            <div class="highlight-ipython3 notranslate">
+             <div class="highlight">
+              <pre><span></span><span class="kn">import</span> <span class="nn">specutils</span>
 <span class="kn">from</span> <span class="nn">specutils.fitting</span> <span class="kn">import</span> <span class="n">continuum</span> 
 <span class="kn">from</span> <span class="nn">specutils.spectra.spectrum1d</span> <span class="kn">import</span> <span class="n">Spectrum1D</span>
 <span class="kn">from</span> <span class="nn">specutils.analysis</span> <span class="kn">import</span> <span class="n">correlation</span>
@@ -594,19 +580,18 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Specutils: "</span><span class="p">,</span> <span class="n">specutils</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre>
-              </div>
-             </div>
-            </div>
-            <div class="cell_output docutils container">
-             <div class="output stream highlight-myst-ansi notranslate">
-              <div class="highlight">
-               <pre><span></span>Specutils:  1.8.1
-</pre>
-              </div>
              </div>
             </div>
            </div>
-          </section>
+           <div class="cell_output docutils container">
+            <div class="output stream highlight-myst-ansi notranslate">
+             <div class="highlight">
+              <pre><span></span>Specutils:  1.8.1
+</pre>
+             </div>
+            </div>
+           </div>
+          </div>
           <section id="download-notebook-01-products">
            <h2>
             0. Download notebook 01 products

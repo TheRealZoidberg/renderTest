@@ -110,7 +110,7 @@ jobs:
           git config --global user.name "theRealZoidberg"
           git config --global user.email "gough@stsci.edu"
 
-          #git branch $BRANCH_NAME
+          git branch $BRANCH_NAME
           git checkout $BRANCH_NAME
           
           # commit

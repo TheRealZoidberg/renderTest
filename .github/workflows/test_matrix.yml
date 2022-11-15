@@ -123,19 +123,19 @@ jobs:
           git push -f origin $BRANCH_NAME
 
           # 'infinitely' pull,rebase,push until push is successful
-          PUSH_SUCCESS=0
-          while [ $PUSH_SUCCESS -eq 0 ]; do
-              #git checkout master
-              git pull
-              git checkout $BRANCH_NAME
-              git rebase master
-              git checkout master
-              git merge --ff-only $BRANCH_NAME
-              git push -u origin $BRANCH_NAME
-              if [ $? -eq 0 ]; then
-                  PUSH_SUCCESS=1
-              fi
-          done
+          #PUSH_SUCCESS=0
+          #while [ $PUSH_SUCCESS -eq 0 ]; do
+          #    #git checkout master
+          #    git pull
+          #    git checkout $BRANCH_NAME
+          #    git rebase master
+          #    git checkout master
+          #    git merge --ff-only $BRANCH_NAME
+          #    git push -u origin $BRANCH_NAME
+          #    if [ $? -eq 0 ]; then
+          #        PUSH_SUCCESS=1
+          #    fi
+          #done
 
       #  uses: EndBug/add-and-commit@v9
       #  with:

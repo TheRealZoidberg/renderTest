@@ -111,11 +111,10 @@ jobs:
           git config --global user.email "gough@stsci.edu"
 
           #git branch $BRANCH_NAME
-          #git checkout $BRANCH_NAME
+          git checkout $BRANCH_NAME
           
           # commit
           git add "${{ matrix.notebooks }}"
-
           git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}""
 
           # force push to branch as backup

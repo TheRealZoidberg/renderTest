@@ -155,6 +155,7 @@ jobs:
       run:
           BRANCH_NAME="gh-storage"
           git checkout $BRANCH_NAME
+          git pull
         
     - name: Set up Python 3.9
       uses: actions/setup-python@v4 ## needed for caching

@@ -124,7 +124,7 @@ jobs:
           git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}"" "${{ matrix.notebooks }}"
 
           # force push to branch as backup
-          git push -f origin $BRANCH_NAME
+          git push -f
           
           # 'infinitely' pull,rebase,push until push is successful
           #PUSH_SUCCESS=0

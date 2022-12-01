@@ -156,11 +156,14 @@ jobs:
           BRANCH_NAME="gh-storage"
           git checkout $BRANCH_NAME
         
-    - name: Set up Python 3.8.10
-      uses: actions/setup-python@v2 ## needed for caching
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4 ## needed for caching
       with:
-        python-version: 3.8.10
-        #cache: 'pip'
+        python-version: '3.9'
+        check-latest: true
+        architecture: "x64"
+      env:
+        AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
 
     - name: Add conda to system path
       run: |

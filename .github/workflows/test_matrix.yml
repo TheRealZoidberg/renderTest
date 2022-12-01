@@ -90,7 +90,10 @@ jobs:
         uses: actions/setup-python@v4 ## needed for caching
         with:
           python-version: '3.8.10'
-          #cache: 'pip'
+          check-latest: true
+          architecture: "x64"
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory

@@ -52,10 +52,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.8.10
-        uses: actions/setup-python@v2 ## needed for caching
+        uses: actions/setup-python@v4 ## needed for caching
         with:
           python-version: 3.8.10
-          #cache: 'pip'
+          cache: 'pip'
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory
@@ -82,12 +82,12 @@ jobs:
         matrix:
             notebooks: ${{ fromJson(needs.gather-notebooks.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v2   
+      - uses: actions/checkout@v3   
       - name: Set up Python 3.8.10
-        uses: actions/setup-python@v2 ## needed for caching
+        uses: actions/setup-python@v4 ## needed for caching
         with:
           python-version: 3.8.10
-          #cache: 'pip'
+          cache: 'pip'
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory

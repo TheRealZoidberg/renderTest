@@ -116,7 +116,7 @@ jobs:
           git config --global user.name "Notebook CI"
           git config --global user.email "nowhere@none.com"
 
-          #git branch $BRANCH_NAME
+          git branch $BRANCH_NAME
           git checkout $BRANCH_NAME
           
           # commit
@@ -124,7 +124,7 @@ jobs:
           git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}"" "${{ matrix.notebooks }}"
 
           # force push to branch as backup
-          git push -f
+          git push -f origin $BRANCH_NAME
           
           # 'infinitely' pull,rebase,push until push is successful
           #PUSH_SUCCESS=0

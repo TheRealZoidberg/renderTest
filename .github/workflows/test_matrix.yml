@@ -113,8 +113,8 @@ jobs:
       - name: Commit back to repo
         run: |
           BRANCH_NAME="gh-storage"
-          #git config --global user.name "theRealZoidberg"
-          #git config --global user.email "gough@stsci.edu"
+          git config --global user.name "Notebook CI"
+          git config --global user.email "nowhere@none.com"
 
           #git branch $BRANCH_NAME
           #git checkout $BRANCH_NAME

@@ -486,13 +486,13 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="cell_input docutils container">
              <div class="highlight-ipython3 notranslate">
               <div class="highlight">
-               <pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">astroquery.mast</span> <span class="kn">import</span> <span class="n">Mast</span>
-<span class="kn">from</span> <span class="nn">astroquery.mast</span> <span class="kn">import</span> <span class="n">Observations</span>
+               <pre><span></span>%matplotlib inline
+import numpy as np
+from astropy.io import fits
+from astropy.table import Table
+import matplotlib.pyplot as plt
+from astroquery.mast import Mast
+from astroquery.mast import Observations
 </pre>
               </div>
              </div>
@@ -543,10 +543,10 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="cell_input docutils container">
              <div class="highlight-ipython3 notranslate">
               <div class="highlight">
-               <pre><span></span><span class="n">keplerObs</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">query_criteria</span><span class="p">(</span><span class="n">target_name</span><span class="o">=</span><span class="s1">'kplr008957091'</span><span class="p">,</span> <span class="n">obs_collection</span><span class="o">=</span><span class="s1">'Kepler'</span><span class="p">)</span>
-<span class="n">keplerProds</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">get_product_list</span><span class="p">(</span><span class="n">keplerObs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">yourProd</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">filter_products</span><span class="p">(</span><span class="n">keplerProds</span><span class="p">,</span><span class="n">extension</span><span class="o">=</span><span class="s1">'kplr008957091-2012277125453_lpd-targ.fits.gz'</span><span class="p">,</span>
-                                        <span class="n">mrp_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+               <pre><span></span>keplerObs = Observations.query_criteria(target_name='kplr008957091', obs_collection='Kepler')
+keplerProds = Observations.get_product_list(keplerObs[0])
+yourProd = Observations.filter_products(keplerProds,extension='kplr008957091-2012277125453_lpd-targ.fits.gz',
+                                        mrp_only=False)
 </pre>
               </div>
              </div>
@@ -559,7 +559,7 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="cell_input docutils container">
              <div class="highlight-ipython3 notranslate">
               <div class="highlight">
-               <pre><span></span><span class="n">yourProd</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+               <pre><span></span>yourProd[0:5]
 </pre>
               </div>
              </div>
@@ -569,8 +569,8 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="cell_input docutils container">
              <div class="highlight-ipython3 notranslate">
               <div class="highlight">
-               <pre><span></span><span class="c1"># Download the products</span>
-<span class="n">Observations</span><span class="o">.</span><span class="n">download_products</span><span class="p">(</span><span class="n">yourProd</span><span class="p">,</span> <span class="n">mrp_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+               <pre><span></span># Download the products
+Observations.download_products(yourProd, mrp_only=False, cache=False)
 </pre>
               </div>
              </div>

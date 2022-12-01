@@ -117,7 +117,7 @@ jobs:
           git config --global user.email "nowhere@none.com"
 
           #git branch $BRANCH_NAME
-          #git checkout $BRANCH_NAME
+          git checkout $BRANCH_NAME
           
           # commit
           #git add "${{ matrix.notebooks }}"

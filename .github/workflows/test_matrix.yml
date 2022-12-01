@@ -154,7 +154,8 @@ jobs:
     - name: Checkout gh-storage branch
       run:
           BRANCH_NAME="gh-storage"
-          git checkout -b $BRANCH_NAME
+          git checkout $BRANCH_NAME
+        
     - name: Set up Python 3.8.10
       uses: actions/setup-python@v2 ## needed for caching
       with:

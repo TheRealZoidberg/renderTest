@@ -154,7 +154,7 @@ jobs:
     - name: Checkout gh-storage branch
       run:
           BRANCH_NAME="gh-storage"
-          git checkout $BRANCH_NAME
+          git checkout -b $BRANCH_NAME
           git pull
         
     - name: Set up Python 3.9

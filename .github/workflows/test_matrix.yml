@@ -155,8 +155,8 @@ jobs:
     - name: Checkout gh-storage branch
       run:
           BRANCH_NAME="gh-storage"
-          git branch $BRANCH_NAME
-          git checkout $BRANCH_NAME
+          git checkout main
+          git checkout $BRANCH_NAME -- notebooks/
         
     - name: Set up Python 3.9
       uses: actions/setup-python@v4 ## needed for caching

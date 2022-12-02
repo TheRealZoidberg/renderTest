@@ -115,32 +115,24 @@ jobs:
           BRANCH_NAME="gh-storage"
           git config --global user.name "Notebook CI"
           git config --global user.email "nowhere@none.com"
-
-          git branch $BRANCH_NAME
-          git checkout $BRANCH_NAME
-          git fetch --unshallow origin
-          
-          # commit
-          #git add "${{ matrix.notebooks }}"
-          git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}"" "${{ matrix.notebooks }}"
-
-          # force push to branch as backup
-          git push -f origin $BRANCH_NAME
           
           # 'infinitely' pull,rebase,push until push is successful
-          #PUSH_SUCCESS=0
-          #while [ $PUSH_SUCCESS -eq 0 ]; do
-          #    #git checkout master
-          ##    #git pull origin $BRANCH_NAME
-          #    git checkout $BRANCH_NAME
-          #    #git rebase $BRANCH_NAME
-          #    git checkout $BRANCH_NAME
-          #    #git merge --ff-only $BRANCH_NAME
-          #    git push -f origin $BRANCH_NAME
-          #    if [ $? -eq 0 ]; then
-          #        PUSH_SUCCESS=1
-          #    fi
-          #done
+          PUSH_SUCCESS=0
+          while [ $PUSH_SUCCESS -eq 0 ]; do
+            git branch $BRANCH_NAME
+            git checkout $BRANCH_NAME
+            git fetch --unshallow origin
+
+            # commit
+            #git add "${{ matrix.notebooks }}"
+            git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}"" "${{ matrix.notebooks }}"
+
+            # force push to branch as backup
+            git push -f origin $BRANCH_NAME
+              if [ $? -eq 0 ]; then
+                  PUSH_SUCCESS=1
+              fi
+          done
                   
   deploy-book:
     needs: [notebook-execution, notebook-validation]

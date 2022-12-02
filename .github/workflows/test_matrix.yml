@@ -118,6 +118,7 @@ jobs:
 
           git branch $BRANCH_NAME
           git checkout $BRANCH_NAME
+          git fetch --unshallow origin
           
           # commit
           #git add "${{ matrix.notebooks }}"

@@ -150,12 +150,12 @@ jobs:
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/ghc
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Checkout gh-storage branch
       run:
           BRANCH_NAME="gh-storage"
-          git checkout -b $BRANCH_NAME
-          git pull
+          git branch $BRANCH_NAME
+          git checkout $BRANCH_NAME
         
     - name: Set up Python 3.9
       uses: actions/setup-python@v4 ## needed for caching

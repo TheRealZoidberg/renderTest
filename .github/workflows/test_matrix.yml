@@ -139,16 +139,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Free up disk space
+    
       run: |
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/ghc
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
     - uses: actions/checkout@v3
     - name: Checkout gh-storage branch
-      run:
+      run: |
           #BRANCH_NAME="gh-storage"
           #git checkout main
-          git pull
+          #git pull
           git checkout gh-storage -- notebooks/
         
     - name: Set up Python 3.9

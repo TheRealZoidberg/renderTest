@@ -148,6 +148,7 @@ jobs:
       run:
           #BRANCH_NAME="gh-storage"
           #git checkout main
+          git pull
           git checkout gh-storage -- notebooks/
         
     - name: Set up Python 3.9

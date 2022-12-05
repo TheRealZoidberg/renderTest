@@ -145,12 +145,11 @@ jobs:
           sudo rm -rf /opt/ghc
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
     - uses: actions/checkout@v3
+      with:
+        ref: gh-storage
     - name: Checkout gh-storage branch
       run: |
-          #BRANCH_NAME="gh-storage"
-          #git checkout main
-          #git pull
-          git checkout gh-storage -- notebooks/
+          git checkout notebooks/
         
     - name: Set up Python 3.9
       uses: actions/setup-python@v4 ## needed for caching

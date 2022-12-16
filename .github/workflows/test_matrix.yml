@@ -51,11 +51,14 @@ jobs:
             notebooks: ${{ fromJson(needs.gather-notebooks.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.8.10
-        uses: actions/setup-python@v2 ## needed for caching
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4 ## needed for caching
         with:
-          python-version: 3.8.10
-          cache: 'pip'
+          python-version: '3.9'
+          check-latest: true
+          architecture: "x64"
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory
@@ -82,12 +85,15 @@ jobs:
         matrix:
             notebooks: ${{ fromJson(needs.gather-notebooks.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v2   
-      - name: Set up Python 3.8.10
-        uses: actions/setup-python@v2 ## needed for caching
+      - uses: actions/checkout@v3   
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4 ## needed for caching
         with:
-          python-version: 3.8.10
-          cache: 'pip'
+          python-version: '3.9'
+          check-latest: true
+          architecture: "x64"
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
       - name: Add conda to system path
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory
@@ -107,38 +113,52 @@ jobs:
       - name: Commit back to repo
         run: |
           BRANCH_NAME="gh-storage"
-          git config --global user.name "theRealZoidberg"
-          git config --global user.email "gough@stsci.edu"
-
-          git branch $BRANCH_NAME
-          git checkout $BRANCH_NAME
+          git config --global user.name "Notebook CI"
+          git config --global user.email "nowhere@none.com"
           
-          # commit
-          git add "${{ matrix.notebooks }}"
-          git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}""
+          # 'infinitely' pull,rebase,push until push is successful
+          PUSH_SUCCESS=0
+          while [ $PUSH_SUCCESS -eq 0 ]; do
+            git branch $BRANCH_NAME
+            git checkout $BRANCH_NAME
+            git fetch --unshallow origin
 
-          # force push to branch as backup
-          git push -f origin $BRANCH_NAME
+            # commit
+            #git add "${{ matrix.notebooks }}"
+            git commit -m "auto generated $BRANCH_NAME - "${{ matrix.notebooks }}"" "${{ matrix.notebooks }}"
+
+            # force push to branch as backup
+            git push -f origin $BRANCH_NAME
+              if [ $? -eq 0 ]; then
+                  PUSH_SUCCESS=1
+              fi
+          done
                   
   deploy-book:
     needs: [notebook-execution, notebook-validation]
     runs-on: ubuntu-latest
     steps:
     - name: Free up disk space
+    
       run: |
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/ghc
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-    - uses: actions/checkout@v2
-    - name: Checkout gh-storage branch
-      run:
-          BRANCH_NAME="gh-storage"
-          git checkout -b $BRANCH_NAME
-    - name: Set up Python 3.8.10
-      uses: actions/setup-python@v2 ## needed for caching
+    - uses: actions/checkout@v3
       with:
-        python-version: 3.8.10
-        cache: 'pip'
+        ref: gh-storage
+    - name: Checkout gh-storage branch
+      run: |
+          git checkout notebooks/
+        
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4 ## needed for caching
+      with:
+        python-version: '3.9'
+        check-latest: true
+        architecture: "x64"
+      env:
+        AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
 
     - name: Add conda to system path
       run: |

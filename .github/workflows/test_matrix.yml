@@ -15,3 +15,6 @@ env:
 jobs:
   NotebookExecutionValidation:
    uses: TheRealZoidberg/reusableTest/.github/workflows/ci_runner.yml@testing2
+   
+  ExecuteNotebooks:
+   uses: TheRealZoidberg/reusableTest/.github/workflows/genHtml.yml@testing2
